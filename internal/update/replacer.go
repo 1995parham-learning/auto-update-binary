@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/nametag/nametag/internal/platform"
+	"github.com/1995parham-learning/auto-update-binary/internal/platform"
 )
 
 // Replacer handles atomic binary replacement

@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nametag/nametag/internal/update"
+	"github.com/1995parham-learning/auto-update-binary/internal/update"
 )
 
 var (

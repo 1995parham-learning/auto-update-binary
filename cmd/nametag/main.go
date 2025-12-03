@@ -9,9 +9,9 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/nametag/nametag/internal/ipc"
-	"github.com/nametag/nametag/internal/platform"
-	"github.com/nametag/nametag/internal/update"
+	"github.com/1995parham-learning/auto-update-binary/internal/ipc"
+	"github.com/1995parham-learning/auto-update-binary/internal/platform"
+	"github.com/1995parham-learning/auto-update-binary/internal/update"
 )
 
 var (
