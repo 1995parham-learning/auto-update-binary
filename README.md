@@ -6,7 +6,7 @@ A self-updating application written in Go.
 
 Nametag uses a **two-binary architecture** for reliable self-updates:
 
-```
+```text
 ┌─────────────────┐      HTTPS       ┌─────────────────┐
 │  Update Server  │◄─────────────────│    nametag      │
 │  (serves bins)  │                  │  (main app)     │
