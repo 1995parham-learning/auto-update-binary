@@ -1,6 +1,6 @@
 # Nametag
 
-A self-updating application written in Go 1.25.
+A self-updating application written in Go.
 
 ## Architecture
 
