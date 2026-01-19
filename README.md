@@ -31,7 +31,7 @@ Nametag uses a **two-binary architecture** for reliable self-updates:
 
 ## Building
 
-Requires Go 1.25 or later and [just](https://github.com/casey/just).
+Requires Go and [just](https://github.com/casey/just).
 
 ```bash
 # Build for current platform
@@ -73,7 +73,8 @@ just server
 ```
 
 The server expects binaries organized as:
-```
+
+```text
 releases/
 ├── nametag/
 │   └── 1.0.0/
@@ -173,18 +174,14 @@ releases/
 ## Design Decisions
 
 1. **Two-Binary Architecture**: Separates update logic from application logic. The updater is minimal and stable, while the main app can change frequently.
-
 2. **SHA256 Verification**: Each download is verified against the checksum in the manifest.
-
 3. **Atomic Replacement**: Uses rename operations for atomic updates. On failure, the old binary is restored.
-
 4. **IPC via File**: Update commands are passed between processes via a JSON file, which is more reliable than command-line arguments for complex data.
-
 5. **Structured Logging**: Uses Go's `log/slog` package for consistent, queryable logs.
 
 ## Project Structure
 
-```
+```text
 nametag/
 ├── cmd/
 │   ├── nametag/        # Main application
@@ -198,12 +195,3 @@ nametag/
 ├── justfile
 └── README.md
 ```
-
-## Requirements
-
-- Go 1.25+
-- For Windows builds: `golang.org/x/sys/windows` package
-
-## License
-
-MIT
