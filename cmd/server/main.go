@@ -125,7 +125,7 @@ func (s *Server) handleDownload(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Construct file path
-	filename := fmt.Sprintf("%s-%s-%s", component, platform, version)
+	filename := fmt.Sprintf("%s-%s", component, platform)
 	if strings.HasPrefix(platform, "windows") {
 		filename += ".exe"
 	}
@@ -190,7 +190,7 @@ func (s *Server) generateManifest() (*update.Manifest, error) {
 
 		// Find assets for each platform
 		for _, plat := range platforms {
-			filename := fmt.Sprintf("%s-%s-%s", comp, plat, latestVersion)
+			filename := fmt.Sprintf("%s-%s", comp, plat)
 			if strings.HasPrefix(plat, "windows") {
 				filename += ".exe"
 			}
